@@ -1,0 +1,566 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; /* Modern and clean font */
+}
+
+body {
+    line-height: 1.5;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #3498db; /* Smooth hover effect */
+}
+
+/* Header and Navigation */
+header {
+    background-color: #2c3e50; /* Darker background for contrast */
+    color: white;
+    padding: 1.5rem 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li a {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.menu-toggle {
+    display: none; /* Hide on large screens */
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    margin: 4px 0;
+    background-color: white;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom right, #3498db, #8e44ad); /* Gradient background */
+    color: white;
+    text-align: center;
+    /* padding: 5rem 1rem; */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+/* About Section */
+.about {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #000;
+}
+
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Projects Section */
+.projects {
+    padding: 4rem 2rem;
+    background-color: #ecf0f1;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #000;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+    padding: 1.2rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.contact button {
+    padding: 1.2rem;
+    background-color: #3498db;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.contact h2{
+    color: #000;
+}
+
+.contact button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: flex; /* Hide nav links by default */
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #2c3e50;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .projects h2,
+    .about h2 {
+        font-size: 2rem;
+    }
+
+    .project-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .contact form {
+        padding: 2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+/* Footer Styles */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center; /* Center the social links */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Space between the social media icons */
+}
+
+.social-link img {
+    width: 40px; /* Adjust the size of social media icons */
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-link img:hover {
+    transform: scale(1.1); /* Adds a hover effect for the icons */
+}
+
+footer p {
+    margin-top: 1rem;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack the social links vertically on mobile */
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+/* Circular Image Style */
+.cover-photo {
+    width: 150px; /* Adjust the size of the circle */
+    height: 150px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image covers the circle without distortion */
+    position: sticky; /* Positions the image */
+    top: 20px; /* Adjust the vertical position */
+    left: 50%; /* Centers the image horizontally */
+    transform: translateX(-50%); /* Ensures it's exactly centered */
+    border: 2px solid #fff; /* Optional: Adds a border around the circle */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for depth */
+}
+
+/* Optionally, make the image fixed at the top */
+.cover-photo-fixed {
+    position: fixed;
+    top: 20px; /* Adjust the vertical position */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; /* Ensure the image stays above other elements */
+}
+/* Skills Section */
+.skills {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Same grid layout as Projects */
+    gap: 20px;
+}
+
+.skill {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(9, 8, 8, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-5px); /* Hover effect similar to Projects */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.skill h3 {
+    font-size: 1.6rem;
+    color: #0b0b0b;
+}
+
+.skill p {
+    font-size: 1rem;
+    color: #0c0b0b;
+}
+
+.project-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background-image: url('path/to/your-image.jpg'); /* Add your image path here */
+    background-size: cover; /* Ensures the image covers the entire card */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+    position: relative; /* Allows us to position text on top of the background */
+    color: white; /* Set the text color to white, but can be adjusted for readability */
+    height: 300px; /* Set a fixed height, or adjust as needed */
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    position: absolute;
+    bottom: 40px; /* Position the title towards the bottom */
+    left: 20px; /* Space from the left */
+    z-index: 2; /* Ensure the title is above the background image */
+}
+
+.project-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    position: absolute;
+    bottom: 20px; /* Position the description just below the title */
+    left: 20px;
+    z-index: 2; /* Ensure the text is above the background */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Optional: Add a semi-transparent overlay to improve text readability */
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay with some transparency */
+    z-index: 1; /* Place the overlay below the text but above the image */
+    border-radius: 8px;
+}
+#skills {
+    background-image: url('path-to-your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 0;
+    color: #555;/* Optional: ensures text stands out */
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.skill {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Adjust width as needed */
+    text-align: center;
+    color: white; /* Ensure text is readable */
+}
+
+/* Assign a different background image to each skill box */
+#html {
+    background-image: url('images/html.jpg');
+}
+
+#css {
+    background-image: url('images/css.png');
+}
+
+#javascript {
+    background-image: url('images/js.png');
+}
+
+#oracle-sql {
+    background-image: url('images/sql.png');
+}
+
+#go {
+    background-image: url('images/Go.jpg');
+}
+
+#python {
+    background-image: url('images/python.png');
+}
+ /* Hide the checkbox that will control the menu visibility */
+ #menu-toggle {
+    display: none;
+  }
+
+  /* Style the label (the button for triggering the menu) */
+  #menu-toggle + label {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 10000;
+  }
+
+  #menu-toggle + label img {
+    width: 40px; /* Adjust icon size */
+    height: 40px;
+  }
+
+  /* Sliding Navbar */
+  #navbarToggleExternalContent {
+    top: 0;
+    right: -250px; /* Start off-screen */
+    width: 250px;
+    height: 100%;
+    transition: right 0.3s ease-in-out;
+    z-index: 9999;
+  }
+
+  /* When the checkbox is checked, slide the navbar into view */
+  #menu-toggle:checked + label + #navbarToggleExternalContent {
+    right: 0;
+  }
+
+  /* Remove background color from the navbar */
+  .bg-dark {
+    background-color: transparent !important;
+  }
+
+  /* Styling for the navigation links inside the navbar */
+  .nav-links {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  .nav-links li a {
+    color: #fbf7f7; /* Dark color for links, no background color */
+    text-decoration: none;
+  }
+
+      /* Card-like style for the collapsible menu */
+      .menu-card {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 400px;
+        z-index: 1050;
+        display: none; /* Initially hidden */
+        border-radius: 10px;
+        transition: 0.3s ease;
+      }
+      
+      /* Close button ("X") */
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 1.5rem;
+        color: #000;
+        background: transparent;
+        border: none;
+      }
+  
+      /* Nav menu items */
+      .nav-item {
+        text-align: center;
+      }
+  
+      /* Set the nav link color to black */
+      .nav-link {
+        color: black !important; /* Set text color to black */
+        transition: background-color 0.3s ease; /* Smooth transition for background color */
+      }
+  
+      /* Add background color on hover */
+      .nav-link:hover {
+        background-color: #f1f1f1; /* Light gray background on hover */
+        color: black !important; /* Ensure the text remains black */
+      }
+
+
+
