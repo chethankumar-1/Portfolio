@@ -9,6 +9,11 @@ body {
     line-height: 1.5;
     background-color: #f8f8f8;
     color: #333;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
 /* Links */
@@ -16,6 +21,9 @@ a {
     text-decoration: none;
     color: inherit;
     transition: color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+
+    
 }
 
 a:hover {
@@ -77,6 +85,8 @@ nav {
 .hero p {
     font-size: 1.25rem;
     line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 /* About Section */
@@ -90,6 +100,7 @@ nav {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: #000;
+    font-family: 'Roboto', sans-serif;
 }
 
 .about p {
@@ -97,6 +108,7 @@ nav {
     line-height: 1.8;
     max-width: 800px;
     margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Projects Section */
@@ -110,6 +122,7 @@ nav {
     text-align: center;
     margin-bottom: 2rem;
     color: #000;
+    font-family: 'Roboto', sans-serif;
 }
 
 .project-cards {
@@ -184,6 +197,7 @@ nav {
 }
 .contact h2{
     color: #000;
+    font-family: 'Roboto', sans-serif;
 }
 
 .contact button:hover {
@@ -219,10 +233,12 @@ footer {
 
     .hero h1 {
         font-size: 2.5rem;
+        font-family: 'Roboto', sans-serif;
     }
 
     .hero p {
         font-size: 1.2rem;
+        font-family: 'Roboto', sans-serif;
     }
 
     .projects h2,
@@ -283,6 +299,7 @@ footer {
 
 footer p {
     margin-top: 1rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Media Queries for Responsive Design */
@@ -330,6 +347,7 @@ footer p {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #000;
+    font-family: 'Roboto', sans-serif;
 }
 
 .skills-list {
@@ -354,6 +372,7 @@ footer p {
 .skill h3 {
     font-size: 1.6rem;
     color: #0b0b0b;
+    font-family: 'Roboto', sans-serif;
 }
 
 .skill p {
@@ -383,6 +402,7 @@ footer p {
     bottom: 40px; /* Position the title towards the bottom */
     left: 20px; /* Space from the left */
     z-index: 2; /* Ensure the title is above the background image */
+    font-family: 'Roboto', sans-serif;
 }
 
 .project-card p {
@@ -551,7 +571,7 @@ footer p {
   
       /* Set the nav link color to black */
       .nav-link {
-        color: black !important; /* Set text color to black */
+        color: rgb(243, 233, 233) !important; /* Set text color to black */
         transition: background-color 0.3s ease; /* Smooth transition for background color */
       }
   
@@ -658,6 +678,8 @@ footer p {
   .hero.visible h1, .hero.visible p, .hero.visible img {
     opacity: 1;
   }
+
+  
   
   
   
