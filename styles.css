@@ -1,4 +1,3 @@
-/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -561,6 +560,109 @@ footer p {
         background-color: #f1f1f1; /* Light gray background on hover */
         color: black !important; /* Ensure the text remains black */
       }
+      /* Add initial zoom-out effect */
+.zoom-in {
+    transform: scale(0.8); /* Start with zoom-out */
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out; /* Smooth zoom-in */
+  }
+  
+  /* Add a class when element is scrolled into view */
+  .zoom-in.visible {
+    transform: scale(1); /* Zoom to normal size */
+    opacity: 1;
+  }
+
+  /* Initial state for skills */
+.skill {
+    transform: scale(0.8); /* Start smaller */
+    opacity: 0; /* Initially hidden */
+    transition: transform 1s ease, opacity 1s ease; /* Smooth zoom and fade-in */
+  }
+  
+  /* When skills become visible (triggered by JavaScript) */
+  .skill.visible {
+    transform: scale(1); /* Zoom to normal size */
+    opacity: 1; /* Fade in */
+  }
+  
+  /* Optional: Delay the animation on each skill element for sequential effect */
+  .skill:nth-of-type(1) {
+    transition-delay: 0.2s;
+  }
+  .skill:nth-of-type(2) {
+    transition-delay: 0.2s;
+  }
+  .skill:nth-of-type(3) {
+    transition-delay: 0.2s;
+  }
+  .skill:nth-of-type(4) {
+    transition-delay: 0.2s;
+  }
+  .skill:nth-of-type(5) {
+    transition-delay: 0.2s;
+  }
+  .skill:nth-of-type(6) {
+    transition-delay: 0.2s;
+  }
+
+  /* Highlight active navbar link */
+.navbar-nav .nav-item.active a {
+    color: #f39c12;  /* Color for active link */
+    text-decoration: none;  /* Optional underline effect */
+  }
+  
+  /* Smooth fade-in for the navbar links */
+  .navbar-nav .nav-item {
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease-in-out; /* Fade-in effect */
+  }
+  
+  /* Make the links appear when they're in view (triggered by scroll) */
+  .navbar-nav .nav-item.visible {
+    opacity: 1; /* Fade to visible */
+  }
+
+  /* Initial state for About section */
+#about {
+    opacity: 0; /* Start invisible */
+    transform: translateY(50px); /* Slightly offset the element for slide-in effect */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth fade-in and slide effect */
+  }
+  
+  /* When About section comes into view */
+  #about.visible {
+    opacity: 1; /* Make visible */
+    transform: translateY(0); /* Bring it back to normal position */
+  }
+
+  /* Initial state for the hero section */
+.hero {
+    opacity: 0; /* Start invisible */
+    transform: scale(0.8); /* Start scaled down for zoom effect */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth fade and zoom effect */
+  }
+  
+  /* When the hero section comes into view */
+  .hero.visible {
+    opacity: 1; /* Make visible */
+    transform: scale(1); /* Zoom into normal size */
+  }
+  
+  /* Optional: Apply a slight delay for each element inside the hero section (image, heading, text) */
+  .hero h1, .hero p, .hero img {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  
+  .hero.visible h1, .hero.visible p, .hero.visible img {
+    opacity: 1;
+  }
+  
+  
+  
+  
+  
 
 
 
