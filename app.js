@@ -180,4 +180,55 @@ $(document).ready(function(){
   });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  const skillsSection = document.getElementById('skills');
+  const progressBars = document.querySelectorAll('.progress-bar');
+
+  // Function to check if the skills section is in the viewport
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Function to trigger the progress bar animation when the section is visible
+  function checkScroll() {
+    if (isInViewport(skillsSection)) {
+      progressBars.forEach((bar) => {
+        const width = bar.getAttribute('aria-valuenow') + '%';
+        bar.style.width = width;  // Set width based on the aria-valuenow attribute
+      });
+    }
+  }
+
+  // Listen to scroll events and check if the section is in the viewport
+  window.addEventListener('scroll', checkScroll);
+  checkScroll();  // Check on load as well
+});
+// Scroll Animation Trigger
+document.addEventListener("DOMContentLoaded", function() {
+  const skillsSection = document.getElementById('skills');
+  const progressBars = document.querySelectorAll('.progress-bar');
+
+  function checkScroll() {
+    const sectionTop = skillsSection.getBoundingClientRect().top;
+    const sectionBottom = skillsSection.getBoundingClientRect().bottom;
+
+    if (sectionTop < window.innerHeight && sectionBottom > 0) {
+      progressBars.forEach((bar) => {
+        const width = bar.getAttribute('aria-valuenow') + '%';
+        bar.style.setProperty('--progress-width', width);
+        bar.classList.add('fade-in');
+      });
+    }
+  }
+
+  window.addEventListener('scroll', checkScroll);
+  checkScroll(); // Check on load as well
+});
+
 

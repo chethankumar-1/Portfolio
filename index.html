@@ -30,22 +30,29 @@
 <body>
   <!-- Navigation -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">My Portfolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="Chethankumaratr-1.pdf">Resume</a></li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Portfolio</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body" id="navbarNav">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="Chethankumaratr-1.pdf">Resume</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </nav>
-    
   </header>
   <!-- Hero Section -->
   <section class="hero zoom-in">
@@ -80,30 +87,56 @@
 </section>
 
 
-  <!-- Skills Section -->
-  <section id="skills" class="skills fade-in">
-    <h2>My Skills</h2>
-    <div class="skills-list">
-      <div class="skill" id="html">
-        <h3>HTML</h3>
-      </div>
-      <div class="skill" id="css">
-        <h3>CSS</h3>
-      </div>
-      <div class="skill" id="javascript">
-        <h3>JavaScript</h3>
-      </div>
-      <div class="skill" id="oracle-sql">
-        <h3>Oracle SQL</h3>
-      </div>
-      <div class="skill" id="go">
-        <h3>GO</h3>
-      </div>
-      <div class="skill" id="python">
-        <h3>Python</h3>
+<!-- Skills Section -->
+<section id="skills" class="skills fade-in">
+  <h2>My Skills</h2>
+  <div class="skills-list">
+    <div class="skill" id="html">
+      <h3>HTML</h3>
+      <!-- HTML Progress Bar -->
+      <div class="progress">
+        <div class="progress-bar html-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
       </div>
     </div>
-  </section>
+    <div class="skill" id="css">
+      <h3>CSS</h3>
+      <!-- CSS Progress Bar -->
+      <div class="progress">
+        <div class="progress-bar css-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+      </div>
+    </div>
+    <div class="skill" id="javascript">
+      <h3>JavaScript</h3>
+      <!-- JavaScript Progress Bar -->
+      <div class="progress">
+        <div class="progress-bar javascript-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+      </div>
+    </div>
+    <div class="skill" id="oracle-sql">
+      <h3>Oracle SQL</h3>
+      <!-- Oracle SQL Progress Bar -->
+      <div class="progress">
+        <div class="progress-bar sql-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+      </div>
+    </div>
+    <div class="skill" id="go">
+      <h3>Go</h3>
+      <!-- Go Progress Bar -->
+      <div class="progress">
+        <div class="progress-bar go-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+      </div>
+    </div>
+    <div class="skill" id="python">
+      <h3>Python</h3>
+      <!-- Python Progress Bar -->
+      <div class="progress">
+        <div class="progress-bar python-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
 
   <!-- Contact Section -->
   <section id="contact" class="contact zoom-in">
