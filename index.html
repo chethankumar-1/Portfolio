@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <meta charset="UTF-8">
@@ -32,14 +34,33 @@
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="#">
+          <img src="images/chethan.jpg" alt="My Portfolio" class="navbar-img">
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div
+          class="offcanvas offcanvas-end text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
           <div class="offcanvas-header">
             <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Portfolio</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
           </div>
           <div class="offcanvas-body" id="navbarNav">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -54,16 +75,18 @@
       </div>
     </nav>
   </header>
-  <!-- Hero Section -->
-  <section class="hero zoom-in">
-    <h1>Hello, I'm Chethankumara T R</h1>
-    <p>I'm a Software Developer passionate about creating amazing websites and apps.</p>
-    <img src="images/chethan.jpg" alt="Cover Photo" class="cover-photo">
-  </section>  
+  
+ <!-- Hero Section -->
+<section class="hero zoom-in">
+  <h1>Hello, I'm Chethankumara T R</h1>
+  <p>I'm a Software Developer passionate about creating amazing websites and apps.</p>
+  <!-- <img src="images/chethan.jpg" alt="Cover Photo" class="cover-photo"> -->
+</section>
+ 
   
 <!--About Section-->
-<section id="about" class="about">
-  <h2>About Me</h2>
+<section id="about"  class="about" class="about" data-aos="fade-up">
+  <h2 align="center">About Me</h2>
   <p>
     I am a passionate and skilled software developer with a strong academic foundation and hands-on experience in the tech industry. I hold a Bachelor's degree in Computer Applications (BCA) from 2022 and recently completed my Master’s in Computer Applications (MCA) in 2024. Currently, I am working with River Engineer & Technology Services, a company based in Mysore, where I contribute to the development and maintenance of innovative software solutions.
   </p>
@@ -72,64 +95,74 @@
 
 <!-- Projects Section -->
 <section id="projects" class="projects">
-  <h2>My Projects</h2>
+  <h2 align="center" data-aos="zoom-in">My Projects</h2>
   <div class="project-cards">
-    <div class="project-card zoom-in" style="background-image: url('images/inventory.jpg');">
-      <h3>Inventory Management System (IMS)</h3>
+    <div class="project-card zoom-in1" style="background-image: url('images/inventory.jpg');" data-aos="zoom-in">
+      <div class="card-content">
+        <h3>Inventory Management System (IMS)</h3>
+        <p>Manage inventory efficiently with a robust system.</p>
+      </div>
     </div>
-    <div class="project-card zoom-in" style="background-image: url('images/mentor.jpg');">
-      <h3>Student Mentoring System (SMS)</h3>
+    <div class="project-card zoom-in1" style="background-image: url('images/mentor.jpg');" data-aos="zoom-in">
+      <div class="card-content">
+        <h3>Student Mentoring System (SMS)</h3>
+        <p>A platform for guiding and mentoring students effectively.</p>
+      </div>
     </div>
-    <div class="project-card zoom-in" style="background-image: url('images/lock.jpg');">
-      <h3> IoT-based Password Unlock Lock Security System</h3>
+    <div class="project-card zoom-in1" style="background-image: url('images/lock.jpg');" data-aos="zoom-in">
+      <div class="card-content">
+        <h3>IoT-based Password Unlocker</h3>
+        <p>Enhancing lock security with an IoT-based password system.</p>
+      </div>
     </div>
   </div>
 </section>
 
 
+
 <!-- Skills Section -->
 <section id="skills" class="skills fade-in">
-  <h2>My Skills</h2>
+  <h2 align="center">My Skills</h2>
   <div class="skills-list">
     <div class="skill" id="html">
       <h3>HTML</h3>
       <!-- HTML Progress Bar -->
-      <div class="progress">
+      <div class="progress" data-aos="slide-up">
         <div class="progress-bar html-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
       </div>
     </div>
     <div class="skill" id="css">
       <h3>CSS</h3>
       <!-- CSS Progress Bar -->
-      <div class="progress">
+      <div class="progress" data-aos="slide-up">
         <div class="progress-bar css-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
       </div>
     </div>
     <div class="skill" id="javascript">
       <h3>JavaScript</h3>
       <!-- JavaScript Progress Bar -->
-      <div class="progress">
+      <div class="progress" data-aos="slide-up">
         <div class="progress-bar javascript-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
       </div>
     </div>
     <div class="skill" id="oracle-sql">
       <h3>Oracle SQL</h3>
       <!-- Oracle SQL Progress Bar -->
-      <div class="progress">
+      <div class="progress" data-aos="slide-up">
         <div class="progress-bar sql-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
       </div>
     </div>
     <div class="skill" id="go">
       <h3>Go</h3>
       <!-- Go Progress Bar -->
-      <div class="progress">
+      <div class="progress" data-aos="slide-up">
         <div class="progress-bar go-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
       </div>
     </div>
     <div class="skill" id="python">
       <h3>Python</h3>
       <!-- Python Progress Bar -->
-      <div class="progress">
+      <div class="progress" data-aos="slide-up">
         <div class="progress-bar python-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
       </div>
     </div>
@@ -140,7 +173,7 @@
 
   <!-- Contact Section -->
   <section id="contact" class="contact zoom-in">
-    <h2>Contact Me</h2>
+    <h2 align="center">Contact Me</h2>
     <form id="contact-form">
       <input type="text" id="name" name="name" placeholder="Your Name" required>
       <input type="email" id="email" name="email" placeholder="Your Email" required>
@@ -155,13 +188,13 @@
       <div class="social-links">
         <a href="https://www.linkedin.com/in/chethankumara-t-r-05ab94243" target="_blank" class="social-link">
           <i class="fab fa-linkedin fa-2x"></i>
-        </a>
+        </a>&nbsp
         <a href="https://www.facebook.com/chamak.chethan.3?mibextid=ZbWKwL" target="_blank" class="social-link">
           <i class="fab fa-facebook fa-2x"></i>
-        </a>
+        </a>&nbsp
         <a href="https://www.instagram.com/i_am_chethan17?igsh=MW1jYzF5bHFwaDQ0dw==" target="_blank" class="social-link">
           <i class="fab fa-instagram fa-2x"></i>
-        </a>
+        </a>&nbsp
       </div>
     </div>
     <p>© 2024 Chethankumara T R. All rights reserved.</p>
