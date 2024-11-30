@@ -226,6 +226,7 @@ h1, h2, h3 {
     font-family: 'Inter', sans-serif;
     font-size: 3rem;
     font-weight: 700;
+    padding: 20px;
   }
   .hero p {
     font-family: 'Roboto', sans-serif;
@@ -245,4 +246,39 @@ h1, h2, h3 {
   width: auto; /* Maintain the aspect ratio */
   border-radius: 50%;
 }
+/* Add running animation to progress bars */
+.progress-bar {
+  width: 0; /* Start with 0 width */
+  animation: runProgress 2s ease forwards; /* Apply running animation */
+}
+
+@keyframes runProgress {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--target-width); /* Use custom property for dynamic width */
+  }
+}
+
+/* Initialize the custom properties dynamically */
+.html-bar {
+  --target-width: 90%; /* Set target width for HTML */
+}
+.css-bar {
+  --target-width: 85%; /* Set target width for CSS */
+}
+.javascript-bar {
+  --target-width: 75%; /* Set target width for JavaScript */
+}
+.sql-bar {
+  --target-width: 80%; /* Set target width for Oracle SQL */
+}
+.go-bar {
+  --target-width: 70%; /* Set target width for GoLANG */
+}
+.python-bar {
+  --target-width: 95%; /* Set target width for Python */
+}
+
 
